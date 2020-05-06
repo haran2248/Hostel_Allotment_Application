@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOSTEL ALLOTMENT APP"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/hosteltext"
+        android:textSize="30dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER YOUR LOGIN ID AND PASSWORD OR SIGNUP"
+        android:layout_below="@+id/hosteltext"
+        android:textSize="15dp"
+        android:layout_margin="50dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="USERNAME"
+        android:id="@+id/user"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_IDEditTExt"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PASSWORD"
+        android:id="@+id/pass"
+        android:layout_below="@id/user"
+        android:layout_margin="10dp"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_passwordEditText"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:strokeColor="#F8E002"
+        app:strokeWidth="5dp"
+        app:cornerRadius="10dp"
+        app:rippleColor="#F5CD06"
+        app:backgroundTint="#60E3D8E6"
+        android:layout_margin="10dp"
+        android:text="LOGIN"
+        android:layout_gravity="left"
+        android:layout_toRightOf="@+id/signupbtn"
+        android:layout_below="@+id/pass"
+        android:textColor="#E91224"
+        android:id="@+id/loginbtn"
+
+        />
+    <Button
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:strokeColor="#F8E002"
+        app:strokeWidth="5dp"
+        app:cornerRadius="10dp"
+        app:rippleColor="#F5CD06"
+        app:backgroundTint="#60E3D8E6"
+        android:layout_margin="10dp"
+        android:text="SIGNUP"
+        android:layout_below="@+id/pass"
+
+        android:textColor="#E91224"
+        android:id="@+id/signupbtn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_below="@+id/signupbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_width="157dp"
+        android:layout_height="210dp"
+        android:src="@drawable/download"
+        app:civ_border_color="#0340F7"
+        app:civ_border_width="2dp"
+        android:layout_gravity="center"
+        android:rotation="0"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="10"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NO OF ROOMS"
+                android:id="@+id/nor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:strokeColor="#F8E002"
+            app:strokeWidth="5dp"
+            app:cornerRadius="10dp"
+            app:rippleColor="#F5CD06"
+            app:backgroundTint="#60E3D8E6"
+            android:text="NEXT"
+            android:layout_gravity="center"
+            android:textColor="#E91224"
+            android:id="@+id/next"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID No. 1: "
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:id="@+id/ID_1_TextView"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="8"
+                android:visibility="gone"
+                android:id="@+id/ID_1_EditText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/ID_2_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="ID No. 2: "
+                android:visibility="gone" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="8"
+                android:visibility="gone"
+                android:id="@+id/ID_2_EditText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID No. 3: "
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:id="@+id/ID_3_TextView"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="8"
+                android:visibility="gone"
+                android:id="@+id/ID_3_EditText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID No. 4: "
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:id="@+id/ID_4_TextView"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="8"
+                android:visibility="gone"
+                android:id="@+id/ID_4_EditText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID No. 5: "
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:id="@+id/ID_5_TextView"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="8"
+                android:visibility="gone"
+                android:id="@+id/ID_5_EditText"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:id="@+id/save_btn"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:layout_width="88dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="home"
+            android:background="#E90909"
+            android:layout_gravity="center_horizontal"
+        android:id="@+id/home"
+
+        />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

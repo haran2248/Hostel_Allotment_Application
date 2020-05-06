@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78507103233",
+    "firebase_url": "https://hostel-allotment-applica-44cbb.firebaseio.com",
+    "project_id": "hostel-allotment-applica-44cbb",
+    "storage_bucket": "hostel-allotment-applica-44cbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78507103233:android:2cd056eb291f4d8645dc00",
+        "android_client_info": {
+          "package_name": "com.example.hostelallotmentapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78507103233-em1l0ghu9fdd3988f5tgmu9bagfro3qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeaGwzy_OS-SrEs1gIQVn8YPKrllY9JMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78507103233-em1l0ghu9fdd3988f5tgmu9bagfro3qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
