@@ -97,4 +97,8 @@ public class Details {
         this.hostel = hostel;
         NoOfRooms = noOfRooms;
     }
+    public Details()
+    {
+
+    }
 }

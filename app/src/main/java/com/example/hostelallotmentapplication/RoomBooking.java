@@ -62,7 +62,7 @@ public class RoomBooking extends AppCompatActivity {
                 }
                 else
                 {
-                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("no of rooms booked").setValue(No);
+                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("no of rooms booked").setValue(No);
                     changeVisibility();
                 }
             }
@@ -150,15 +150,15 @@ public class RoomBooking extends AppCompatActivity {
                     String user4=id_4_EditText.getText().toString();
                     String user5=id_5_EditText.getText().toString();
                     if(!(user1.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Wing1").setValue(user1);
+                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Wing1").setValue(user1);
                     if(!(user2.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Wing2").setValue(user2);
+                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Wing2").setValue(user2);
                     if(!(user3.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("wing3").setValue(user3);
+                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing3").setValue(user3);
                     if(!(user4.equals("")))
-                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("wing4").setValue(user4);
+                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing4").setValue(user4);
                     if(!(user5.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("wing5").setValue(user5);
+                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing5").setValue(user5);
 
                 Toast.makeText(RoomBooking.this, "Room booking done successfully", Toast.LENGTH_SHORT).show();
                 Intent fin=new Intent(RoomBooking.this,DetailsPage.class);

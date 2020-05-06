@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DetailsPage extends AppCompatActivity {
     RecyclerView details;
@@ -33,7 +34,7 @@ public class DetailsPage extends AppCompatActivity {
         details=findViewById(R.id.details_rv);
         exit=findViewById(R.id.exit);
         auth=FirebaseAuth.getInstance();
-
+        details.setLayoutManager(new LinearLayoutManager(this));
         databaseReference= FirebaseDatabase.getInstance().getReference().child("users").child(auth.getCurrentUser().getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,7 +45,7 @@ public class DetailsPage extends AppCompatActivity {
                 }
                 adapter=new DetailsRVAdapter(detailsArrayList,getApplicationContext());
                 details.setAdapter(adapter);
-                details.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                Toast.makeText(DetailsPage.this,"Success",Toast.LENGTH_SHORT).show();
             }
 
             @Override
