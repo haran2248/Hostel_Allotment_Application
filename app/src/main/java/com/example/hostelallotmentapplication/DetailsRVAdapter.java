@@ -40,7 +40,7 @@ public class DetailsRVAdapter extends RecyclerView.Adapter<DetailsRVAdapter.Deta
         TextView Roomno,NoofRooms,Name,Email,Wing1,NewHostel;
         public DetailsVH(@NonNull View itemView) {
             super(itemView);
-            Roomno=itemView.findViewById(R.id.roomno);
+            Roomno=itemView.findViewById(R.id.roomNo);
             NoofRooms=itemView.findViewById(R.id.Nos);
             Name=itemView.findViewById(R.id.name);
             Email=itemView.findViewById(R.id.email);

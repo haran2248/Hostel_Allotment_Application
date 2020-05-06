@@ -44,7 +44,7 @@ public class RoomBooking extends AppCompatActivity {
                 if(No>1)
                 {
 
-                    Toast.makeText(RoomBooking.this, "Sorry. You cannot book more than 5 rooms!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RoomBooking.this, "Sorry. You cannot book more than 1 rooms!", Toast.LENGTH_SHORT).show();
 
                     /*AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
 
