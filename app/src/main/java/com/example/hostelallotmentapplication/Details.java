@@ -2,6 +2,8 @@ package com.example.hostelallotmentapplication;
 
 public class Details {
     String name,email,roomno,wing1,hostel;
+    int NoOfRooms;
+
 
     public Details(String name, String email, String roomno, String wing1, String hostel, int noOfRooms) {
         this.name = name;
@@ -12,7 +14,7 @@ public class Details {
         NoOfRooms = noOfRooms;
     }
 
-    int NoOfRooms;
+
 
     public String getWing1() {
         return wing1;

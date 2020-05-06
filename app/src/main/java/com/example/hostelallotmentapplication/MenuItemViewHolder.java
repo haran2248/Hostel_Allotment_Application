@@ -29,7 +29,6 @@ public class MenuItemViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Intent book = new Intent(itemView.getContext(), RoomBooking.class);
-                book.putExtra("name", menuItemNameid);
                 userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("new Hostel").setValue(menuItemNameid);
                 itemView.getContext().startActivity(book);
             }
