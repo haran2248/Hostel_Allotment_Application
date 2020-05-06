@@ -1,7 +1,17 @@
 package com.example.hostelallotmentapplication;
 
 public class Details {
-    String name,email,roomno,wing1,wing2,wing3,wing4,wing5,hostel;
+    String name,email,roomno,wing1,hostel;
+
+    public Details(String name, String email, String roomno, String wing1, String hostel, int noOfRooms) {
+        this.name = name;
+        this.email = email;
+        this.roomno = roomno;
+        this.wing1 = wing1;
+        this.hostel = hostel;
+        NoOfRooms = noOfRooms;
+    }
+
     int NoOfRooms;
 
     public String getWing1() {
@@ -12,37 +22,6 @@ public class Details {
         this.wing1 = wing1;
     }
 
-    public String getWing2() {
-        return wing2;
-    }
-
-    public void setWing2(String wing2) {
-        this.wing2 = wing2;
-    }
-
-    public String getWing3() {
-        return wing3;
-    }
-
-    public void setWing3(String wing3) {
-        this.wing3 = wing3;
-    }
-
-    public String getWing4() {
-        return wing4;
-    }
-
-    public void setWing4(String wing4) {
-        this.wing4 = wing4;
-    }
-
-    public String getWing5() {
-        return wing5;
-    }
-
-    public void setWing5(String wing5) {
-        this.wing5 = wing5;
-    }
 
     public String getHostel() {
         return hostel;
@@ -85,18 +64,6 @@ public class Details {
         this.roomno = roomno;
     }
 
-    public Details(String name, String email, String roomno, String wing1, String wing2, String wing3, String wing4, String wing5, String hostel, int noOfRooms) {
-        this.name = name;
-        this.email = email;
-        this.roomno = roomno;
-        this.wing1 = wing1;
-        this.wing2 = wing2;
-        this.wing3 = wing3;
-        this.wing4 = wing4;
-        this.wing5 = wing5;
-        this.hostel = hostel;
-        NoOfRooms = noOfRooms;
-    }
     public Details()
     {
 

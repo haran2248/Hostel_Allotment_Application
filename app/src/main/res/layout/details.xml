@@ -46,34 +46,7 @@
         android:id="@+id/WingM1"
         android:textSize="35dp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wing2"
-        android:id="@+id/WingM2"
-        android:textSize="35dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wing3"
-        android:id="@+id/WingM3"
-        android:textSize="35dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wing4"
-        android:id="@+id/WingM4"
-        android:textSize="35dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wing5"
-        android:id="@+id/WingM5"
-        android:textSize="35dp"
-        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

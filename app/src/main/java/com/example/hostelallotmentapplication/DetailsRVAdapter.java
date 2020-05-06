@@ -37,7 +37,7 @@ public class DetailsRVAdapter extends RecyclerView.Adapter<DetailsRVAdapter.Deta
     }
 
     public class DetailsVH extends RecyclerView.ViewHolder {
-        TextView Roomno,NoofRooms,Name,Email,Wing1,Wing2,Wing3,Wing4,Wing5,NewHostel;
+        TextView Roomno,NoofRooms,Name,Email,Wing1,NewHostel;
         public DetailsVH(@NonNull View itemView) {
             super(itemView);
             Roomno=itemView.findViewById(R.id.roomno);
@@ -45,10 +45,6 @@ public class DetailsRVAdapter extends RecyclerView.Adapter<DetailsRVAdapter.Deta
             Name=itemView.findViewById(R.id.name);
             Email=itemView.findViewById(R.id.email);
             Wing1=itemView.findViewById(R.id.WingM1);
-            Wing2=itemView.findViewById(R.id.WingM2);
-            Wing3=itemView.findViewById(R.id.WingM3);
-            Wing4=itemView.findViewById(R.id.WingM4);
-            Wing5=itemView.findViewById(R.id.WingM5);
             NewHostel=itemView.findViewById(R.id.newH);
         }
 
@@ -58,10 +54,6 @@ public class DetailsRVAdapter extends RecyclerView.Adapter<DetailsRVAdapter.Deta
             Roomno.setText(details.getRoomno());
             NoofRooms.setText(String.valueOf(details.getNoOfRooms()));
             Wing1.setText(details.getWing1());
-            Wing2.setText(details.getWing2());
-            Wing3.setText(details.getWing3());
-            Wing4.setText(details.getWing4());
-            Wing5.setText(details.getWing5());
             NewHostel.setText(details.getHostel());
         }
     }

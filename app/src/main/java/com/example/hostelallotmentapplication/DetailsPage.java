@@ -35,12 +35,12 @@ public class DetailsPage extends AppCompatActivity {
         exit=findViewById(R.id.exit);
         auth=FirebaseAuth.getInstance();
         details.setLayoutManager(new LinearLayoutManager(this));
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("users").child(auth.getCurrentUser().getUid());
+        databaseReference= FirebaseDatabase.getInstance().getReference().child("users");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 ArrayList<Details> detailsArrayList=new ArrayList<>();
-                for(DataSnapshot shot:dataSnapshot.getChildren()){
+                for(DataSnapshot shot:dataSnapshot.child(auth.getCurrentUser().getUid()).getChildren()){
                     detailsArrayList.add(shot.getValue(Details.class));
                 }
                 adapter=new DetailsRVAdapter(detailsArrayList,getApplicationContext());

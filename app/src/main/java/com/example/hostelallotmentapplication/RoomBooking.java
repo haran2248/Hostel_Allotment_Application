@@ -41,7 +41,7 @@ public class RoomBooking extends AppCompatActivity {
 
                 No=Integer.parseInt(textInputEditText.getText().toString());
 
-                if(No>5)
+                if(No>1)
                 {
 
                     Toast.makeText(RoomBooking.this, "Sorry. You cannot book more than 5 rooms!", Toast.LENGTH_SHORT).show();
@@ -101,42 +101,6 @@ public class RoomBooking extends AppCompatActivity {
                 id_1_TextView.setVisibility(View.VISIBLE);
                 Save.setVisibility(View.VISIBLE);
                 break;
-            case 2: id_1_EditText.setVisibility(View.VISIBLE);
-                id_2_EditText.setVisibility(View.VISIBLE);
-                id_1_TextView.setVisibility(View.VISIBLE);
-                id_2_TextView.setVisibility(View.VISIBLE);
-                Save.setVisibility(View.VISIBLE);
-                break;
-            case 3: id_1_EditText.setVisibility(View.VISIBLE);
-                id_2_EditText.setVisibility(View.VISIBLE);
-                id_3_EditText.setVisibility(View.VISIBLE);
-                id_1_TextView.setVisibility(View.VISIBLE);
-                id_2_TextView.setVisibility(View.VISIBLE);
-                id_3_TextView.setVisibility(View.VISIBLE);
-                Save.setVisibility(View.VISIBLE);
-                break;
-            case 4: id_1_EditText.setVisibility(View.VISIBLE);
-                id_2_EditText.setVisibility(View.VISIBLE);
-                id_3_EditText.setVisibility(View.VISIBLE);
-                id_4_EditText.setVisibility(View.VISIBLE);
-                id_1_TextView.setVisibility(View.VISIBLE);
-                id_2_TextView.setVisibility(View.VISIBLE);
-                id_3_TextView.setVisibility(View.VISIBLE);
-                id_4_TextView.setVisibility(View.VISIBLE);
-                Save.setVisibility(View.VISIBLE);
-                break;
-            case 5: id_1_EditText.setVisibility(View.VISIBLE);
-                id_2_EditText.setVisibility(View.VISIBLE);
-                id_3_EditText.setVisibility(View.VISIBLE);
-                id_4_EditText.setVisibility(View.VISIBLE);
-                id_5_EditText.setVisibility(View.VISIBLE);
-                id_1_TextView.setVisibility(View.VISIBLE);
-                id_2_TextView.setVisibility(View.VISIBLE);
-                id_3_TextView.setVisibility(View.VISIBLE);
-                id_4_TextView.setVisibility(View.VISIBLE);
-                id_5_TextView.setVisibility(View.VISIBLE);
-                Save.setVisibility(View.VISIBLE);
-                break;
         }
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,20 +109,8 @@ public class RoomBooking extends AppCompatActivity {
 
 
                     String user1=id_1_EditText.getText().toString();
-                    String user2=id_2_EditText.getText().toString();
-                    String user3=id_3_EditText.getText().toString();
-                    String user4=id_4_EditText.getText().toString();
-                    String user5=id_5_EditText.getText().toString();
                     if(!(user1.equals("")))
                         databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Wing1").setValue(user1);
-                    if(!(user2.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Wing2").setValue(user2);
-                    if(!(user3.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing3").setValue(user3);
-                    if(!(user4.equals("")))
-                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing4").setValue(user4);
-                    if(!(user5.equals("")))
-                        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("wing5").setValue(user5);
 
                 Toast.makeText(RoomBooking.this, "Room booking done successfully", Toast.LENGTH_SHORT).show();
                 Intent fin=new Intent(RoomBooking.this,DetailsPage.class);
