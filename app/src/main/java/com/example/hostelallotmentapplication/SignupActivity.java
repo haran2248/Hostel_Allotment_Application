@@ -49,8 +49,8 @@ public class SignupActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
 
-                                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("name").setValue(name.getText().toString());
-                                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("email").setValue(bitsm.getText().toString());
+                                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Name").setValue(name.getText().toString());
+                                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("Email").setValue(bitsm.getText().toString());
                                 userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("RoomNO").setValue(room.getText().toString());
                                 Toast.makeText(SignupActivity.this,"User created successfully",Toast.LENGTH_SHORT).show();
                                 Intent intent=new Intent(SignupActivity.this,MainActivity.class);

@@ -62,7 +62,7 @@ public class RoomBooking extends AppCompatActivity {
                 }
                 else
                 {
-                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("no of rooms booked").setValue(No);
+                    databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details").child("noOfRooms").setValue(No);
                     changeVisibility();
                 }
             }

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:id="@+id/name"
+        android:id="@+id/Name"
 
         android:textSize="35dp"
         />
@@ -22,26 +22,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:id="@+id/email"
+        android:id="@+id/Email"
         android:textSize="35dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Room no"
-        android:id="@+id/roomNo"
+        android:id="@+id/RoomNO"
         android:textSize="35dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No of rooms"
-        android:id="@+id/Nos"
+        android:id="@+id/noOfRooms"
         android:textSize="35dp"
         />
 
         <TextView
-            android:id="@+id/WingM1"
+            android:id="@+id/Wing1"
             android:layout_width="83dp"
             android:layout_height="58dp"
             android:text="Wing1"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Hostel"
-        android:id="@+id/newH"
+        android:id="@+id/newHostel"
         android:textSize="35dp"
         />
     </LinearLayout>

@@ -1,73 +1,68 @@
 package com.example.hostelallotmentapplication;
 
 public class Details {
-    String name,email,roomno,wing1,hostel;
-    int NoOfRooms;
-
-
-    public Details(String name, String email, String roomno, String wing1, String hostel, int noOfRooms) {
-        this.name = name;
-        this.email = email;
-        this.roomno = roomno;
-        this.wing1 = wing1;
-        this.hostel = hostel;
-        NoOfRooms = noOfRooms;
-    }
-
-
-
-    public String getWing1() {
-        return wing1;
-    }
-
-    public void setWing1(String wing1) {
-        this.wing1 = wing1;
-    }
-
-
-    public String getHostel() {
-        return hostel;
-    }
-
-    public void setHostel(String hostel) {
-        this.hostel = hostel;
-    }
-
-    public int getNoOfRooms() {
-        return NoOfRooms;
-    }
-
-    public void setNoOfRooms(int noOfRooms) {
-        NoOfRooms = noOfRooms;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRoomno() {
-        return roomno;
-    }
-
-    public void setRoomno(String roomno) {
-        this.roomno = roomno;
-    }
+    String Name,Email,RoomNO,Wing1,newHostel;
+    int noOfRooms;
 
     public Details()
     {
 
+    }
+
+    public Details(String name, String email, String roomNO, String wing1, String newHostel, int noOfRooms) {
+        Name = name;
+        Email = email;
+        RoomNO = roomNO;
+        Wing1 = wing1;
+        this.newHostel = newHostel;
+        this.noOfRooms = noOfRooms;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getRoomNO() {
+        return RoomNO;
+    }
+
+    public void setRoomNO(String roomNO) {
+        RoomNO = roomNO;
+    }
+
+    public String getWing1() {
+        return Wing1;
+    }
+
+    public void setWing1(String wing1) {
+        Wing1 = wing1;
+    }
+
+    public String getNewHostel() {
+        return newHostel;
+    }
+
+    public void setNewHostel(String newHostel) {
+        this.newHostel = newHostel;
+    }
+
+    public int getNoOfRooms() {
+        return noOfRooms;
+    }
+
+    public void setNoOfRooms(int noOfRooms) {
+        this.noOfRooms = noOfRooms;
     }
 }

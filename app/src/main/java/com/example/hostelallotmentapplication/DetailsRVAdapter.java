@@ -40,21 +40,24 @@ public class DetailsRVAdapter extends RecyclerView.Adapter<DetailsRVAdapter.Deta
         TextView Roomno,NoofRooms,Name,Email,Wing1,NewHostel;
         public DetailsVH(@NonNull View itemView) {
             super(itemView);
-            Roomno=itemView.findViewById(R.id.roomNo);
-            NoofRooms=itemView.findViewById(R.id.Nos);
-            Name=itemView.findViewById(R.id.name);
-            Email=itemView.findViewById(R.id.email);
-            Wing1=itemView.findViewById(R.id.WingM1);
-            NewHostel=itemView.findViewById(R.id.newH);
+            Roomno=itemView.findViewById(R.id.RoomNO);
+            NoofRooms=itemView.findViewById(R.id.noOfRooms);
+            Name=itemView.findViewById(R.id.Name);
+            Email=itemView.findViewById(R.id.Email);
+            Wing1=itemView.findViewById(R.id.Wing1);
+            NewHostel=itemView.findViewById(R.id.newHostel);
         }
 
         public void populate(Details details) {
-            Name.setText(details.getName());
-            Email.setText(details.getEmail());
-            Roomno.setText(details.getRoomno());
-            NoofRooms.setText(String.valueOf(details.getNoOfRooms()));
+            Roomno.setText(details.getRoomNO());
             Wing1.setText(details.getWing1());
-            NewHostel.setText(details.getHostel());
+            Email.setText(details.getEmail());
+            Name.setText(details.getName());
+
+            NewHostel.setText(details.getNewHostel());
+            NoofRooms.setText(String.valueOf(details.getNoOfRooms()));
+
+
         }
     }
 }

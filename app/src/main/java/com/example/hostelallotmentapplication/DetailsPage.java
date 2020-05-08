@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +27,9 @@ public class DetailsPage extends AppCompatActivity {
     Button exit;
     FirebaseAuth auth;
     DatabaseReference databaseReference;
+    ArrayList<Details> detailsArrayList;
     DetailsRVAdapter adapter;
+    String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +40,28 @@ public class DetailsPage extends AppCompatActivity {
         exit=findViewById(R.id.exit);
         auth=FirebaseAuth.getInstance();
         details.setLayoutManager(new LinearLayoutManager(this));
+
         databaseReference= FirebaseDatabase.getInstance().getReference().child("users").child(auth.getCurrentUser().getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<Details> detailsArrayList=new ArrayList<>();
+                 detailsArrayList=new ArrayList<>();
                 for(DataSnapshot shot:dataSnapshot.getChildren()){
-                    detailsArrayList.add(shot.getValue(Details.class));
+                   detailsArrayList.add(shot.getValue(Details.class));
+                   try {
+                       Log.i("PET NAME", shot.getValue(Details.class).getName());
+                       Log.i("PET Hostel", shot.getValue(Details.class).getNewHostel());
+                       Log.i("PET Wing", shot.getValue(Details.class).getWing1());
+                       Log.i("PET Email", shot.getValue(Details.class).getEmail());
+                       Log.i("PET NoofRooms", String.valueOf(shot.getValue(Details.class).getNoOfRooms()));
+                       Log.i("PET Roomno", shot.getValue(Details.class).getRoomNO());
+                   }
+                   catch (Exception ex)
+                   {
+                       Log.i("error in retrieval",ex.getMessage());
+                   }
+
+
                 }
                 adapter=new DetailsRVAdapter(detailsArrayList,getApplicationContext());
                 details.setAdapter(adapter);
